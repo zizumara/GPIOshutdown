@@ -1,0 +1,9 @@
+[Unit]
+Description=GPIO shutdown service
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /usr/local/bin/GPIOshutdown.sh
+
+[Install]
+WantedBy=multi-user.target

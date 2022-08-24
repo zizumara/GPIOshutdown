@@ -1,0 +1,25 @@
+GPIOshutdown Service Installation Instructions
+
+These instructions assume that GPIOshutdown.py is located in /home/pi.  If you want to use
+a different directory for the Python script, be sure to edit GPIOshutdown.sh to point to 
+this directory.
+
+1. Copy GPIOshutdown.sh to directory /usr/local/bin.
+
+2. Make sure GPIOshutdown.sh is executable with
+
+      sudo chmod 755 /usr/local/bin/GPIOshutdown.sh
+
+3. Copy GPIOshutdown.service to directory /lib/systemd/system.
+
+4. Use the following to enable the service on startup.
+
+      sudo systemctl enable GPIOshutdown
+      
+5. To check status after startup, use
+
+      sudo systemctl status GPIOshutdown
+   
+   This should display status showing that GPIOshutdown.service is loaded and 
+   the status is "active (running)".
+
