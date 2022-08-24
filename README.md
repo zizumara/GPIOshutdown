@@ -1,4 +1,5 @@
 # GPIOshutdown
+![Pi Zero with shutdown switch](pi-shutdown-switch.jpg)
 
 One vulnerability of the Raspberry Pi is its susceptibility to micro SD card corruption.  The main cause of this is interruption of power while the SD card is being written.  Such interruptions in some cases may not only corrupt the file being written, but may make the entire micro SD card unusable.  The problem is exacerbated in designs where the Raspberry Pi is run headless, leaving no convenient way to request a graceful shutdown.
 
