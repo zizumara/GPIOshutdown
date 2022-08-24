@@ -5,4 +5,6 @@ One vulnerability of the Raspberry Pi is its susceptibility to micro SD card cor
 
 The GPIOshutdown Python script, when run as a service, provides a way to initiate a graceful shutdown of the operating system by grounding one of its GPIO pins through a switch.  The script monitors pin 26 by default, but this may be changed by editing the value of SHUTDOWN_PIN in GPIOshutdown.py.  When launched, the script will wait for a fixed period before beginning to monitor the GPIO pin.  This is a fail safe to allow the user to login via SSH and stop the service to prevent continuous rebooting in the event that the GPIO pin is damaged or otherwise accidentally shorted.  The delay defaults to 180 seconds, but may be changed by editing the value of ARMING_DELAY IN GPIOshutdown.py.
 
+It is highly recommended that markings be added near the switch to indicate which position initiates shutdown, since the closed position of the switch is usually interpreted as ON.  In this application, closed means shutdown.
+
 Installation instructions are documented in setup.txt.
